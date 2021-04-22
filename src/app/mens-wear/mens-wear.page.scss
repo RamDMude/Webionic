@@ -1,0 +1,40 @@
+.m {
+    text-align:center;
+    position: relative;
+    left: 1px;
+    height: 170px;
+    width: 400px;
+}
+.sub {
+    position: absolute;
+    bottom: 0px;
+    padding-left: 30px;
+}
+
+.ProductCards {
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    
+}
+.ProductCards:hover {
+    box-shadow: 5px 5px 5px 5px  #acacac;
+}
+.Viewbutton {
+    width: 150px;
+    background-color: rgb(0, 127, 231);
+    text-align: center;
+    margin-bottom: 30px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(0, 127, 231);
+  }
+  
+  .Viewbutton:hover {
+    color: rgb(0, 127, 231);
+    background-color: white;
+  }

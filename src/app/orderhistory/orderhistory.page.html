@@ -1,0 +1,43 @@
+
+<ion-content>
+  <app-navbar></app-navbar>
+  <div class="container" style=" padding-left:10px; margin-top: 20px;">
+      <span><h4><b>Order History</b></h4></span>
+   </div>
+   <div class="container" style="padding-bottom:30px;">
+       <div class="row" id="myid" *ngFor='let ord of data.orderList'>
+           <div class="col-md-2">
+             <img src="{{ord.picture}}" style="height:100px;">
+           </div>
+           <div class="col-md-4">
+               <div class="row">
+                   <div class="col-md-12">
+                       <h3><b>{{ord.name}}</b></h3>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12" id="my">
+                       <b>Ordered</b>
+                       <span class="myclass">Expected Delivery: 30 April 2021</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-2">
+               <span class="myclass1">Quantity:1</span>
+           </div>
+           <div class="col-md-4">
+               <div class="row">
+                   <div class="col-md-12">
+                       <span class="myclass2">$50</span>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12" id="my1">
+                       <span class="myclass3">ORDER DETAILS</span><span class="myclass4">DOWNLOAD INVOICE</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <app-footer></app-footer>
+</ion-content>

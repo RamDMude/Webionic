@@ -1,0 +1,106 @@
+
+<ion-content>
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+      <div class="row mx-5 mb-4">
+          <div class="col-md-12  " style="height: 600px;">
+              <img src="../assets/Images/banner1.jpg" alt="Banner" style="height: 600px; width: 1500px;">
+          </div>
+      </div>
+
+      <h2>
+          BEST SELLER OF THE SEASON
+      </h2>
+      <p style="margin:30px ; font-size: 20px; text-align: center; ">
+          These are the best picked best sellers exclusively for you<br> Have a look
+      </p>
+      <div class="row mx-5">
+          <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of data.productList'>
+              
+            <div class="col-md-12 ProductCards">
+                <div class="row " style="height: 380px; text-align: center;">
+                    <img src="{{prod.picture}}" style="height: 370px;width: 321px;display: block; object-fit: cover; padding-left: 5px;">
+                </div>
+                <div style="padding-top:10px ;">{{prod.name}}</div>
+                <div style="padding-bottom: 10px;"><s>{{prod.oldprice}}</s><b>  {{prod.price}}</b></div>
+              </div>
+          
+          
+          </div>
+      </div>
+
+
+      <div style="text-align: center;">
+          <button type="button" class="Viewbutton m-4">VIEW ALL</button>
+      </div>
+
+
+      <div class="row m-5 mt-3">
+          <div class="col-md-12 " style="height: 600px;text-align: center; color: white;">
+            <img src="../assets/Images/banner2.jpg" alt="Banner" style="height: 600px; width: 1500px; object-fit: cover;">
+          </div>
+      </div>
+
+      <div class="row mx-5 mt-5 ">
+        <div class="col-md-4 mb-5">
+            <div class="col-md-12 ProductCards">
+                <div class="row " style="height: 400px;width: fit-content;">
+                  <img src="../assets/Images/image10.jpg"  style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;">
+                </div>
+                <div style="padding: 10px;"><b>DRESSES</b></div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="col-md-12 ProductCards">
+                <div class="row " style="height: 400px;width: fit-content;">
+                  <img src="../assets/Images/image12.jpg" style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;"> 
+                </div>
+                <div style="padding: 10px;"><b>WATCHES</b></div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="col-md-12 ProductCards">
+                <div class="row " style="height: 400px;width: fit-content;">
+                  <img src="../assets/Images/image11.jpg" style="height: 400px;width: 437px; object-fit: cover; padding-left: 5px;"> 
+                </div>
+                <div style="padding: 10px;"><b>JACKETS</b></div>
+            </div>
+        </div>
+      </div>
+
+      
+      
+
+
+      <div class="row m-5 ">
+          <div class="col-md-4">
+              <div class="col-md-12 ">
+                  <img src="assets/Images/man_avatar.png" alt="Man" class="row reviewimage">
+                  <div class="row pt-4 reviewimage "><b>Customer Name</b></div>
+                  <div class="row  reviewimage ">⭐⭐⭐⭐⭐</div>
+                  <div class="row customerreviews ">Reviews will be here Reviews will be here Reviews will be here
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="col-md-12 ">
+                  <img src="assets/Images/woman_avatar.png" alt="Woman" class="row reviewimage">
+                  <div class="row pt-4 reviewimage "><b>Customer Name</b></div>
+                  <div class="row  reviewimage ">⭐⭐⭐⭐⭐</div>
+                  <div class="row customerreviews ">Reviews will be here Reviews will be here Reviews will be here
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="col-md-12 ">
+                  <img src="assets/Images/man_avatar.png" alt="Man" class="row reviewimage">
+                  <div class="row pt-4 reviewimage "><b>Customer Name</b></div>
+                  <div class="row  reviewimage ">⭐⭐⭐⭐⭐</div>
+                  <div class="row customerreviews ">Reviews will be here Reviews will be here Reviews will be here
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>

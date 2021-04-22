@@ -1,0 +1,30 @@
+.myclass5{
+    margin-top:10px;
+    
+    color:rgba(0, 0, 252, 0.726);
+}
+.heading{
+    padding-left:67px; 
+    margin-bottom: 15px;
+    
+}
+.logincard{
+    padding: 50px  ;
+    
+    border: 1px solid #888888;
+}
+.loginbutton{
+    height: 40px;
+    width: 380px ;
+    background-color: rgb(0, 127, 231);
+    text-align: center ;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(0, 127, 231) ;
+    box-shadow: 2px 2px 2px 2px  #b6b6b6;
+}
+.loginbutton:hover{
+    color: rgb(0, 127, 231);  
+    background-color:white ;
+}
