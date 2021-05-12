@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -8,65 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomepagePage implements OnInit {
 
   public data:any;
-  constructor() { }
+  menswear = [];
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.data={
-      result:status,
-      productList:[
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image1.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image2.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image3.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image4.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image5.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image6.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image7.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        },
-        {
-          "price":"$ 50",
-          "picture":"/assets/Images/image8.jpg",
-          "name":"XYZ",
-          "oldprice":"$ 100"
-        }
-        
-  
-      ]
-
-    }
-  }
+    this.http.get('http://127.0.0.1:8000/menswear/').subscribe((res : any) => {
+      this.menswear = res.mens ;
+    })
+  } 
 
 }

@@ -8,14 +8,14 @@
                   <p style="text-align: center;font-weight: bolder;font-size: 20px;">LOGIN WITH SHOPPER'S STOP</p>
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="email" id="email" name="email" Placeholder="Email ID" style="width:380px;height: 40px;">
+                  <input type="email"  name="email" Placeholder="Email ID" style="width:380px;height: 40px;" [(ngModel)]="email">
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="password" id="password" name="password" Placeholder="Password" style="width:377px; height: 40px;">  
+                  <input type="password"  name="password" Placeholder="Password" style="width:377px; height: 40px;"[(ngModel)]="password">  
                   <i class="far fa-eye pt-1" id="togglePassword" style="font-size: 30px; margin-left: -40px;" ></i>
               </div>
               <div class="row p-2"style="text-align: center;">
-                  <button type="button" class="loginbutton">LOGIN</button>
+                  <button type="button" class="loginbutton" (click)="login()">LOGIN</button>
               </div>
               <div class="row px-3 pt-2 mt-2" style="text-align: center;">
                   New to Shopper's Stop? <a href='../createaccount/'> Create an Account</a>

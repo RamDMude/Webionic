@@ -4,11 +4,11 @@
 <div class="container-fluid">
   <h1 style="text-align: left;padding: 30px;padding-top: 10px; margin-left: 30px; font-weight:900;">Men's Tshirts</h1>
   <div class="row mx-5">
-      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of data.productList'>
+      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of menswear' routerLink="/productpage" [queryParams]="{productname: prod.name }">
           
         <div class="col-md-12 ProductCards">
           <div class="row " style="height: 380px; text-align: center;">
-              <img src="{{prod.picture}}" style="height: 370px;width: 321px;display: block; object-fit: cover; padding-left: 5px;">
+              <img src="{{prod.picture}}" style="height: 370px;width: 323px;display: block; object-fit: cover; padding-left: 5px;">
           </div>
           <div style="padding-top:10px ;">{{prod.name}}</div>
           <div style="padding-bottom: 10px;"><s>{{prod.oldprice}}</s><b>  {{prod.price}}</b></div>

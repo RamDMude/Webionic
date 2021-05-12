@@ -3,22 +3,22 @@
 <div class="container-fluid ">
     <div class="row m-5">
         <div class="col-md-1 p-1" style="height:auto">
-            <div class="row mb-3" style="height: 120px; width: 70px; background-color: #d6eefa;"> 
-
+            <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
             </div>
-            <div class="row mb-3" style="height: 120px; width: 70px; background-color: #d6eefa;"> 
-
+            <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
             </div>
-            <div class="row mb-3" style="height: 120px; width: 70px; background-color: #d6eefa;"> 
-
+            <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
             </div>
-            <div class="row mb-3" style="height: 120px; width: 70px; background-color: #d6eefa;"> 
-
+            <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
             </div>
         </div>
         <div class="col-md-4 p-1" style="height:auto;">
-            <div class="row "  style="height: 600px ;width: 450px; background-color: #d6eefa;">
-                
+            <div class="row " >
+                <img src={{picture}} style="height: 600px ;width: 450px; display: block; object-fit: cover; ">
             </div>
 
             <div class="row mt-3">
@@ -36,10 +36,10 @@
         </div>
         <div class="col-md-7 "  >
             <div class="row py-2" style="font-weight: bolder;font-size: 22px;"> 
-                PRODUCT NAME  
+                {{productname}}
             </div>
             <div class="row py-2" style="font-weight: bold;">
-                $1099.99
+                {{price}}
             </div>
             <div class="row pt-1" style="color: rgb(112, 112, 112);" >
                 Size
@@ -50,10 +50,16 @@
                 <button class="mx-2" style="width: 100px;">LARGE</button>
             </div>
             <div class="row">
-                <p style="color: rgb(112, 112, 112);"> Low Stock :</p><p style="color: darkred; font-weight: bold;">Only 5 Left</p>
+                <p style="color: rgb(112, 112, 112);"> Low Stock :</p><p style="color: darkred; font-weight: bold;">Only {{stock}} Left</p>
             </div>
-            <div class="row py-3">
-                <button type="button" class="loginbutton" style="width: 300px;font-weight: bold;">ADD TO CART</button>
+            <div class="row py-3 ">
+                <div class="col-md-5 ">
+                    <button type="button" class="loginbutton px-5" style="width: 300px;font-weight: bold;" >BUY NOW</button>
+                </div>
+                <div class="col-md-5">
+                    <button type="button" class="lbutton px-5" style="width: 300px;font-weight: bold;">ADD TO CART</button>
+                </div>
+
             </div>
             <div class="row py-3">
                 <div class="col-md-3">
@@ -103,19 +109,19 @@
             </div>
             <hr width="110%" color="grey">  
             <div class="row py-1" style="font-size: 14px;">
-                <b>Color</b> - Text Goes Here
+                <b>Color</b> - {{color}}
             </div>
             <div class="row py-1" style="font-size: 14px;">
-                <b>Weight</b> - Text Goes Here
+                <b>Sleeve</b> - {{sleeve}}
             </div>
             <div class="row py-1" style="font-size: 14px;">
-                <b>Material</b> - Text Goes Here
+                <b>Material</b> - {{material}}
             </div>
             <div class="row py-1" style="font-size: 14px;">
-                <b>Weight</b> - Text Goes Here
+                <b>Fit</b> - {{fit}}
             </div>
             <div class="row py-1" style="font-size: 14px;">
-                <b>Material</b> - Text Goes Here
+                <b>Suitable For</b> - {{suitable}}
             </div>
         </div>
     </div>

@@ -38,3 +38,18 @@
     background: #cb2027;
     color: white;
 }
+.lbutton{
+    height: 40px;
+    width: 380px ;
+    background-color: white;
+    text-align: center ;
+    color: blue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid blue ;
+    box-shadow: 2px 2px 2px 2px  #b6b6b6;
+}
+.lbutton:hover{
+    color:white;  
+    background-color:blue ;
+}
