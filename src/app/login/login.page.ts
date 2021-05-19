@@ -13,7 +13,23 @@ export class LoginPage implements OnInit {
   email ;
   password ;
   status:string ;
+  icon = "far fa-eye-slash" ;
+  atttype = "password" ;
   ngOnInit() {
+  }
+
+  
+
+  toggle(){
+    
+    if (this.icon == "far fa-eye-slash" ) {
+      this.atttype = "text" ;
+      this.icon = "far fa-eye" ;
+    }
+    else {
+      this.atttype = "password" ;
+      this.icon = "far fa-eye-slash" ;
+    }
   }
 
   login(){

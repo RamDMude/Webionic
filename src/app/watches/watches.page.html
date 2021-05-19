@@ -1,10 +1,9 @@
-
 <ion-content>
   <app-navbar></app-navbar>
 <div class="container-fluid">
-  <h1 style="text-align: left;padding: 30px;padding-top: 10px; margin-left: 30px; font-weight:900;">Men's Tshirts</h1>
+  <h1 style="text-align: left;padding: 30px;padding-top: 10px; margin-left: 30px; font-weight:900;">Watches</h1>
   <div class="row mx-5">
-      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of menswear' routerLink="/productpage" [queryParams]="{productname: prod.name }">
+      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of watches' routerLink="/productpage" [queryParams]="{productname: prod.name }">
           
         <div class="col-md-12 ProductCards">
           <div class="row " style="height: 380px; text-align: center;">
@@ -30,7 +29,7 @@
         </div>
     </div>
     <div class="col-md-4 mb-5">
-        <div class="col-md-12 ProductCards " routerLink = "/watches">
+        <div class="col-md-12 ProductCards">
             <div class="row " style="height: 400px;width: fit-content;">
               <img src="../assets/Images/image12.jpg" style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;"> 
             </div>

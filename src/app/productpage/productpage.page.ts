@@ -36,7 +36,33 @@ export class ProductpagePage implements OnInit {
       this.material = res.material ;
       this.suitable = res.suitable ;
       
+      
     })
+
+    this.http.post('http://127.0.0.1:8000/womensproduct/' ,{productname :this.productname }).subscribe((res : any) => {
+      this.picture = res.photo ;
+      this.price = res.price ;
+      this.stock = res.stock ;
+      this.color = res.color ;
+      this.sleeve = res.sleeve ;
+      this.fit = res.fit ;
+      this.material = res.material ;
+      this.suitable = res.suitable ;
+      
+    })
+
+    this.http.post('http://127.0.0.1:8000/watchesproduct/' ,{productname :this.productname }).subscribe((res : any) => {
+      this.picture = res.photo ;
+      this.price = res.price ;
+      this.stock = res.stock ;
+      this.color = res.color ;
+      this.sleeve = res.sleeve ;
+      this.fit = res.fit ;
+      this.material = res.material ;
+      this.suitable = res.suitable ;
+      
+    })
+    
   }
 
 

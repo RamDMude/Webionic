@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'productpage',
     loadChildren: () => import('./productpage/productpage.module').then( m => m.ProductpagePageModule)
   },
+  {
+    path: 'womens-wear',
+    loadChildren: () => import('./womens-wear/womens-wear.module').then( m => m.WomensWearPageModule)
+  },
+  {
+    path: 'watches',
+    loadChildren: () => import('./watches/watches.module').then( m => m.WatchesPageModule)
+  },
 ];
 
 @NgModule({

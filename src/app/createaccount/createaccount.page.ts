@@ -20,6 +20,20 @@ export class CreateaccountPage implements OnInit {
   number ;
   password ;
   status ;
+  icon1 = "far fa-eye-slash" ;
+  atttype1 = "password" ;
+
+  toggle1(){
+    
+    if (this.icon1 == "far fa-eye-slash" ) {
+      this.atttype1 = "text" ;
+      this.icon1 = "far fa-eye" ;
+    }
+    else {
+      this.atttype1 = "password" ;
+      this.icon1 = "far fa-eye-slash" ;
+    }
+  }
 
   register(){
     if ((this.firstname ==null && this.lastname ==null) && (this.number ==null && this.password ==null)){
