@@ -1,0 +1,27 @@
+.pricebox{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    border:1px solid #d1d1d1 ;
+    box-shadow: 1px 0px 10px   #c4c4c4;
+}
+
+.ordernow{
+    border:1px solid #d1d1d1 ;
+    box-shadow: 1px 1px  10px  #c4c4c4;
+}
+.loginbutton{
+    height: 60px;
+    width: 240px ;
+    background-color: rgb(228, 112, 110);
+    text-align: center ;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(228, 112, 110) ;
+    box-shadow: 2px 2px 10px 2px  #b6b6b6;
+}
+.loginbutton:hover{
+    color: rgb(228, 112, 110);  
+    background-color:white ;
+}

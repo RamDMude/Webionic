@@ -4,27 +4,39 @@
 <div class="container-fluid">
   <h1 style="text-align: left;padding: 30px;padding-top: 10px; margin-left: 30px; font-weight:900;">Men's Tshirts</h1>
   <div class="row mx-5">
-      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of menswear' routerLink="/productpage" [queryParams]="{productname: prod.name }">
+      <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of menswear' routerLink="/productpage" [queryParams]="{productid: prod._id }">
           
         <div class="col-md-12 ProductCards">
           <div class="row " style="height: 380px; text-align: center;">
-              <img src="{{prod.picture}}" style="height: 370px;width: 99%;display: block; object-fit: cover; padding-left: 5px;">
+              <img src="{{prod.picture}}" style="height: 370px;width: 98.5%;display: block; object-fit: cover; padding-left: 5px;">
           </div>
           <div style="padding-top:10px ;">{{prod.name}}</div>
-          <div style="padding-bottom: 10px;"><s>{{prod.oldprice}}</s><b>  {{prod.price}}</b></div>
+          <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+
+          <section class="details">
+            <div class="min-details">
+            <div style="padding-top:10px ;"><b>{{prod.name}}</b></div>
+            <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+            <input type="button" value="ADD TO CART" class="lbutton px-5" style="width: 300px;font-weight: bold;" (click)="addcart(prod._id)">
+            </div>  
+          </section>
+
         </div>
       </div>
   </div>
-
+  <div style="text-align: center;" id="showd" style="display:none;">
+    <h2>
+      <b>Adding New T-Shirts Soon</b>
+    </h2></div>
   <div style="text-align: center;">
-    <button type="button" class="Viewbutton m-4">View All Products</button>
+    <button type="button" class="Viewbutton m-4" (click)="showdiv()">VIEW ALL</button>
   </div>
 
   <div class="row mx-5 mt-5 ">
     <div class="col-md-4 mb-5">
         <div class="col-md-12 ProductCards">
             <div class="row " style="height: 400px;width: fit-content;">
-              <img src="../assets/Images/image10.jpg"  style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;">
+              <img src="http://127.0.0.1:8000/Images/image10.jpg"  style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;">
             </div>
             <div style="padding: 10px;"><b>DRESSES</b></div>
         </div>
@@ -32,7 +44,7 @@
     <div class="col-md-4 mb-5">
         <div class="col-md-12 ProductCards " routerLink = "/watches">
             <div class="row " style="height: 400px;width: fit-content;">
-              <img src="../assets/Images/image12.jpg" style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;"> 
+              <img src="http://127.0.0.1:8000/Images/image12.jpg" style="height: 400px;width: 437px;display: block; object-fit: cover; padding-left: 5px;"> 
             </div>
             <div style="padding: 10px;"><b>WATCHES</b></div>
         </div>
@@ -40,7 +52,7 @@
     <div class="col-md-4 mb-5">
         <div class="col-md-12 ProductCards">
             <div class="row " style="height: 400px;width: fit-content;">
-              <img src="../assets/Images/image11.jpg" style="height: 400px;width: 437px; object-fit: cover; padding-left: 5px;"> 
+              <img src="http://127.0.0.1:8000/Images/image11.jpg" style="height: 400px;width: 437px; object-fit: cover; padding-left: 5px;"> 
             </div>
             <div style="padding: 10px;"><b>JACKETS</b></div>
         </div>

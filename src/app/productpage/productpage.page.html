@@ -4,21 +4,21 @@
     <div class="row m-5">
         <div class="col-md-1 p-1" style="height:auto">
             <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
-                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover;  box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);">
             </div>
             <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
-                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover;  box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);">
             </div>
             <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
-                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover;  box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);">
             </div>
             <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
-                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover;  box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);">
             </div>
         </div>
         <div class="col-md-4 p-1" style="height:auto;">
             <div class="row " >
-                <img src={{picture}} style="height: 600px ;width: 450px; display: block; object-fit: cover; ">
+                <img src={{picture}} style="height: 600px ;width: 450px; display: block; object-fit: cover; box-shadow: 1px 1px 10px 1px rgb(155, 155, 155); ">
             </div>
 
             <div class="row mt-3">
@@ -39,25 +39,31 @@
                 {{productname}}
             </div>
             <div class="row py-2" style="font-weight: bold;font-size: 25px;">
-                {{price}}
+                <div class="col-md-2" style="margin-left: -15px;">
+                    $ {{price}}
+                </div>
+                <div class="col-md-3" style="color: rgb(133, 133, 133);">
+                    <s style="font-weight: initial; color: rgb(141, 141, 141);">$ {{oldp}}</s>
+                </div>
+                 
             </div>
             <div class="row pt-1" style="color: rgb(112, 112, 112);" >
                 Size
             </div>
             <div class="row pb-3"  >
-                <button class="mr-2" style="width: 100px;">SMALL</button>
-                <button class="mx-2" style="width: 100px;">MEDIUM</button>
-                <button class="mx-2" style="width: 100px;">LARGE</button>
+                <button class="mr-2" style="width: 100px;height:30px;">SMALL</button>
+                <button class="mx-2" style="width: 100px;height:30px;">MEDIUM</button>
+                <button class="mx-2" style="width: 100px;height:30px;">LARGE</button>
             </div>
             <div class="row">
                 <p style="color: rgb(112, 112, 112);"> Low Stock :</p><p style="color: darkred; font-weight: bold;">Only {{stock}} Left</p>
             </div>
             <div class="row py-3 ">
                 <div class="col-md-5 ">
-                    <button type="button" class="loginbutton px-5" style="width: 300px;font-weight: bold;" >BUY NOW</button>
+                    <input type="button" value="BUY NOW" class="loginbutton px-5" style="width: 300px;font-weight: bold;" >
                 </div>
                 <div class="col-md-5">
-                    <button type="button" class="lbutton px-5" style="width: 300px;font-weight: bold;">ADD TO CART</button>
+                    <input type="button" value="ADD TO CART" class="lbutton px-5" style="width: 300px;font-weight: bold;" (click)="addcart()">
                 </div>
 
             </div>

@@ -7,18 +7,27 @@
               <div class="row px-5 " >
                   <p style="text-align: center;font-weight: bolder;font-size: 20px;">LOGIN WITH SHOPPER'S STOP</p>
               </div>
-              <div class="row p-2 " style="text-align: center;">
-                  <input type="email"  name="email" Placeholder="Email ID" style="width:380px;height: 40px;" [(ngModel)]="email">
+              <div class="row " style="text-align: center;">
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                       Email ID </ion-label>
+                  <ion-input type="email"  name="email" Placeholder="Email ID" style="width:380px;height: 40px;" [(ngModel)]="email"></ion-input>
+                </ion-item>
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="{{atttype}}"  name="password" Placeholder="Password" style="width:377px; height: 40px;"[(ngModel)]="password">  
-                  <i class="{{icon}} pt-1" style="font-size: 30px; margin-left: -40px;" (click)="toggle()"></i>
+               
+                    <ion-item>
+                        <ion-label position="floating" class="text-secondary">
+                            Password </ion-label>
+                  <ion-input type="{{atttype}}"  name="password" Placeholder="Password" style="width:293px; height: 40px;"[(ngModel)]="password"></ion-input>
+                </ion-item> 
+                  <ion-icon class="{{icon}}" style="font-size: 30px; padding-right: 20px;padding-top: 6%;" (click)="toggle()"></ion-icon>
               </div>
-              <div class="row p-2"style="text-align: center;">
+              <div class="row p-2 pt-4"style="text-align: center;">
                   <button type="button" class="loginbutton" (click)="login()">LOGIN</button>
               </div>
               <div class="row px-3 pt-2 mt-2" style="text-align: center;">
-                  New to Shopper's Stop? <a href='../createaccount/'> Create an Account</a>
+                  New to Shopper's Stop? <a routerLink="/createaccount"> Create an Account</a>
               </div>    
           </div>
           <div class="col-md-4"></div>

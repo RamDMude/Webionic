@@ -1,0 +1,172 @@
+<ion-content>
+  <app-navbar></app-navbar>
+   <div class="container body1" style="padding-top:30px;">
+    <div class="row">
+      <div class="col-md-8">
+        <ngx-wheel
+      #wheel
+      width='600'
+      height='600'
+      spinDuration='8'
+      [items]='items'
+      [innerRadius]='20'
+      [spinAmount]='10'
+      [textOrientation]='textOrientation'
+      [textAlignment]='textAlignment'
+      pointerStrokeColor='black'
+      pointerFillColor='gold'
+      [idToLandOn]='idToLandOn'
+      (onSpinStart)='before()'
+      (onSpinComplete)='after()'
+    ></ngx-wheel>
+    <!-- <div class="reset">
+      <button (click)="reset()">Reset</button>
+    </div> -->
+    <div class="buttons">
+      <input type="button" class="spin" value="SPIN" (click)="spin()">
+      <!-- <button (click)="spin(1)">Prize 1</button>
+      <button (click)="spin(2)">Prize 2</button>
+      <button (click)="spin(3)">Prize 3</button>
+      <button (click)="spin(4)">Prize 4</button>
+      <button (click)="spin(5)">Prize 5</button>
+      <button (click)="spin(6)">Prize 6</button>
+      <button (click)="spin(7)">Prize 7</button>
+      <button (click)="spin(8)">Prize 8</button>
+      <button (click)="spin(9)">Prize 9</button>
+      <button (click)="spin(10)">Prize 10</button>
+      <button (click)="spin(11)">Prize 11</button> -->
+    </div>
+      <!-- <div class="mainbox" id="mainbox">
+        <div class="box" id="box">
+          <div class="box1">
+            <span class="span1"><b>10</b></span>
+            <span class="span2"><b>100</b></span>
+            <span class="span3"><b>40</b></span>
+            <span class="span4"><b>30</b></span>
+          </div>
+          <div class="box2">
+            <span class="span1"><b>110</b></span>
+            <span class="span2"><b>120</b></span>
+            <span class="span3"><b>70</b></span>
+            <span class="span4"><b>80</b></span>
+          </div>
+        </div>
+        
+        <input type="button" class="spin" value="SPIN" id="spinbutton" (click)="spinfunc()">
+
+      </div> -->
+      </div>
+      <div class="col-md-4">
+        <div class="row percent">
+          <h1 style="margin-left: 20%; font-weight: bold; font-size: 30px;">
+            Spin the Wheel 
+          </h1>
+        </div>
+        <div class="row percent pb-1">
+          Special one time offer for new Users
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110);">
+          <div class="col-md-6">
+            Prize 0  
+          </div>
+          <div class="col-md-6">
+            : $5 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF;">
+          <div class="col-md-6">
+            Prize 1  
+          </div>
+          <div class="col-md-6">
+            : $10 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110);">
+          <div class="col-md-6">
+            Prize 2 
+          </div>
+          <div class="col-md-6">
+            : $8 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF;">
+          <div class="col-md-6">
+            Prize 3  
+          </div>
+          <div class="col-md-6">
+            : $1 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110);">
+          <div class="col-md-6">
+            Prize 4 
+          </div>
+          <div class="col-md-6">
+            : $40 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF;">
+          <div class="col-md-6">
+            Prize 5  
+          </div>
+          <div class="col-md-6">
+            : $3 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110);">
+          <div class="col-md-6">
+            Prize 6  
+          </div>
+          <div class="col-md-6">
+            : $15 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF;">
+          <div class="col-md-6">
+            Prize 7  
+          </div>
+          <div class="col-md-6">
+            : $13 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110);">
+          <div class="col-md-6">
+            Prize 8  
+          </div>
+          <div class="col-md-6">
+            : $24 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF;">
+          <div class="col-md-6">
+            Prize 9 
+          </div>
+          <div class="col-md-6">
+            : $9 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:rgb(228, 112, 110)">
+          <div class="col-md-6">
+            Prize 10  
+          </div>
+          <div class="col-md-6">
+            : $21 off 
+          </div>
+        </div>
+        <div class="row percent" style="background-color:#FFFFFF">
+          <div class="col-md-6">
+            Prize 11  
+          </div>
+          <div class="col-md-6">
+            : $17 off 
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    
+   </div>
+   
+   <app-footer></app-footer>
+</ion-content>

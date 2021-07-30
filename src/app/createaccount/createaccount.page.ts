@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createaccount',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CreateaccountPage implements OnInit {
 
-  constructor(private http: HttpClient ) {}
+  constructor(private http: HttpClient , private route :Router) {}
 
   ngOnInit() {
   }
@@ -40,8 +41,9 @@ export class CreateaccountPage implements OnInit {
       alert("Fill all the Details");
     }
     else{
-      this.http.post('http://127.0.0.1:8000/users/', {email: this.email , firstname : this.firstname ,lastname:this.lastname , number:this.number ,password : this.password}).subscribe((res : any) => {
+      this.http.post('http://127.0.0.1:8000/api/users/', {email: this.email , firstname : this.firstname ,lastname:this.lastname , number:this.number ,password : this.password}).subscribe((res : any) => {
       alert(res.message);
+      this.route.navigateByUrl("login");
     } )
     }
     

@@ -1,40 +1,44 @@
 
 <ion-content>
   <app-navbar></app-navbar>
-  <div class="container" style=" padding-left:10px; margin-top: 20px;">
-      <span><h4><b>Order History</b></h4></span>
-   </div>
    <div class="container" style="padding-bottom:30px;">
-       <div class="row" id="myid" *ngFor='let ord of data.orderList'>
+    <h1 style="text-align: left;padding: 30px;padding-top: 10px; margin-left: 30px; font-weight:900;">Order History</h1>
+       <div class="row" id="myid" *ngFor='let prod of productinfo'>
            <div class="col-md-2">
-             <img src="{{ord.picture}}" style="height:100px;">
+             <img src="{{prod.photo}}" style="height: 150px; width: 90%; display: block; object-fit: cover; ">
            </div>
-           <div class="col-md-4">
+           <div class="col-md-5">
                <div class="row">
-                   <div class="col-md-12">
-                       <h3><b>{{ord.name}}</b></h3>
+                   <div class="col-md-12" style="font-size: 20px;" [queryParams]="{productid: prod._id}" routerLink="/productpage">
+                       <b>{{prod.name}}</b>
                    </div>
                </div>
-               <div class="row">
+               <div class="row pt-3">
+                    <div class="col-md-12">
+                        <input type="button" value="BUY AGAIN" class="loginbutton" style="font-weight: bold;" (click)="addcart(prod._id)">
+                    </div> 
+                </div>
+               <div class="row pt-4">
                    <div class="col-md-12" id="my">
                        <b>Ordered</b>
-                       <span class="myclass">Expected Delivery: 30 April 2021</span>
+                       <span class="myclass">Expected Delivery: 30 July</span>
                    </div>
                </div>
            </div>
            <div class="col-md-2">
-               <span class="myclass1">Quantity:1</span>
+                <div class="row"> 
+                    <span class="myclass1">Quantity:1</span>
+                </div>
+                <div class="row pt-5" style="margin-top:48px;"> 
+                    <span class="myclass3">ORDER DETAILS</span>
+                </div>
            </div>
-           <div class="col-md-4">
+           <div class="col-md-3">
                <div class="row">
-                   <div class="col-md-12">
-                       <span class="myclass2">$50</span>
-                   </div>
+                       <span class="myclass2"><b>$ {{prod.price}}</b></span>
                </div>
-               <div class="row">
-                   <div class="col-md-12" id="my1">
-                       <span class="myclass3">ORDER DETAILS</span><span class="myclass4">DOWNLOAD INVOICE</span>
-                   </div>
+               <div class="row pt-5" style="margin-top:48px;">
+                    <span class="myclass3">DOWNLOAD INVOICE</span>
                </div>
            </div>
        </div>

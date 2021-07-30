@@ -1,16 +1,16 @@
 .loginbutton{
     height: 40px;
     width: 380px ;
-    background-color: blue;
+    background-color: rgb(228, 112, 110);
     text-align: center ;
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 2px solid blue ;
+    border: 2px solid rgb(228, 112, 110) ;
     box-shadow: 2px 2px 2px 2px  #b6b6b6;
 }
 .loginbutton:hover{
-    color: blue;  
+    color: rgb(228, 112, 110);  
     background-color:white ;
 }
 .fa {
@@ -43,13 +43,13 @@
     width: 380px ;
     background-color: white;
     text-align: center ;
-    color: blue;
+    color: rgb(228, 112, 110);
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 2px solid blue ;
+    border: 2px solid rgb(228, 112, 110);
     box-shadow: 2px 2px 2px 2px  #b6b6b6;
 }
 .lbutton:hover{
     color:white;  
-    background-color:blue ;
+    background-color:rgb(228, 112, 110) ;
 }

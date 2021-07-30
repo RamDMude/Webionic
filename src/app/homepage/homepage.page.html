@@ -2,10 +2,25 @@
 <ion-content>
   <app-navbar></app-navbar>
   <div class="container-fluid">
-      <div class="row mx-5 mb-4">
-          <div class="col-md-12  " style="height: 600px;">
+      <div class="row  mb-4">
+          
+            <ion-slides class="slide-padding" pager="true" [options]="slideOpts">
+                <ion-slide *ngFor="let story of topStories">
+                
+                    <ion-img src="{{story.picture}}" style="height: 600px;"></ion-img>
+                    
+                
+                </ion-slide>
+            </ion-slides>
+        
+        <!-- <ion-slide-box slide-interval="30000">
+            <ion-slide ng-repeat="img in allimages">
+              <img class="custom-class" attr.ng-src="{{img}}"/>
+            </ion-slide>
+          </ion-slide-box> -->
+          <!-- <div class="col-md-12  " style="height: 600px;">
               <img src="http://127.0.0.1:8000/Images/banner1.jpg" alt="Banner" style="height: 600px; width: 1500px;">
-          </div>
+          </div> -->
       </div>
 
       <h2>
@@ -15,23 +30,77 @@
           These are the best picked best sellers exclusively for you<br> Have a look
       </p>
       <div class="row mx-5">
-          <div class="col-md-3 mb-5 " style="text-align: center;" *ngFor='let prod of menswear' routerLink="/productpage" [queryParams]="{productname: prod.name }"  >
+          <div class="col-md-3 mb-3 " style="text-align: center;" *ngFor='let prod of menswear; let i = index' routerLink="/productpage" [queryParams]="{productid: prod._id }"  >
               
-            <div class="ProductCards">
+            <div class="col-md-12 ProductCards" *ngIf="i < 4">
                 <div class="row " style="height: 380px; text-align: center;">
-                    <img src="{{prod.picture}}" style="height: 370px;width: 99%;display: block; object-fit: cover; padding-left: 5px;">
+                    <img src="{{prod.picture}}" style="height: 370px;width: 98.5%;display: block; object-fit: cover; padding-left: 5px;">
                 </div>
                 <div style="padding-top:10px ;">{{prod.name}}</div>
-                <div style="padding-bottom: 10px;"><s>{{prod.oldprice}}</s><b>  {{prod.price}}</b></div>
+                <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+      
+                <section class="details">
+                  <div class="min-details">
+                  <div style="padding-top:10px ;"><b>{{prod.name}}</b></div>
+                  <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+                  <input type="button" value="ADD TO CART" class="lbutton px-5" style="width: 300px;font-weight: bold;" (click)="addcart(prod._id)">
+                  </div>  
+                </section>
+      
               </div>
-          
+              
           
           </div>
+          <div class="col-md-3 mb-3 " style="text-align: center;" *ngFor='let prod of womenswear; let i = index' routerLink="/productpage" [queryParams]="{productid: prod._id }"  >
+              
+            <div class="col-md-12 ProductCards" *ngIf="i < 4">
+                <div class="row " style="height: 380px; text-align: center;">
+                    <img src="{{prod.picture}}" style="height: 370px;width: 98.5%;display: block; object-fit: cover; padding-left: 5px;">
+                </div>
+                <div style="padding-top:10px ;">{{prod.name}}</div>
+                <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+      
+                <section class="details">
+                  <div class="min-details">
+                  <div style="padding-top:10px ;"><b>{{prod.name}}</b></div>
+                  <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+                  <input type="button" value="ADD TO CART" class="lbutton px-5" style="width: 300px;font-weight: bold;" (click)="addcart(prod._id)">
+                  </div>  
+                </section>
+      
+              </div>
+              
+          
+          </div>
+
+          <div class="col-md-3 mb-4 " style="text-align: center;" *ngFor='let prod of watches; let i = index' routerLink="/productpage" [queryParams]="{productid: prod._id }"  >
+              
+            <div class="col-md-12 ProductCards" *ngIf="i < 4">
+                <div class="row " style="height: 380px; text-align: center;">
+                    <img src="{{prod.picture}}" style="height: 370px;width: 98.5%;display: block; object-fit: cover; padding-left: 5px;">
+                </div>
+                <div style="padding-top:10px ;">{{prod.name}}</div>
+                <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+      
+                <section class="details">
+                  <div class="min-details">
+                  <div style="padding-top:10px ;"><b>{{prod.name}}</b></div>
+                  <div style="padding-bottom: 10px;"><s>$ {{prod.oldprice}}</s><b>  $ {{prod.price}}</b></div>
+                  <input type="button" value="ADD TO CART" class="lbutton px-5" style="width: 300px;font-weight: bold;" (click)="addcart(prod._id)">
+                  </div>  
+                </section>
+      
+              </div>
+              
+          
+          </div>
+
+          
       </div>
 
 
       <div style="text-align: center;">
-          <button type="button" class="Viewbutton m-4">VIEW ALL</button>
+          <button type="button" class="Viewbutton m-4" routerLink = "/mens-wear">VIEW ALL</button>
       </div>
 
 

@@ -1,0 +1,117 @@
+<ion-content>
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row mx-5 mb-4 mt-3">
+      <div class="col-md-9 px-5 "  >
+        <div class="row">
+          <div class="col-md-12 pricebox">
+            <div class="row" style="font-size: 20px;"> 
+              <b>My Cart ({{items}} items)</b> 
+            </div>
+            <hr style="border-top: 1px solid rgb(180, 180, 180);">  
+            <div class="row" >
+              <div class="col-md-12" >
+                <div class="row py-3 mb-3" *ngFor='let prod of cartproductinfo1' style="box-shadow: 1px 1px 10px 1px  #acacac; ">
+                  <div class="col-md-2" >  
+                    
+                    <div class="row pl-3">
+                      <img src={{prod.photo}} style="height: 150px; width: 90%; display: block; object-fit: cover;">
+                    </div>
+                  </div>
+                  <div class="col-md-6" >
+                    <div class="row pb-5" style="font-size: 18px;" [queryParams]="{productid: prod._id}" routerLink="/productpage" id="pro" [(ngModel)]="productname1">
+                      {{prod.name}}
+                    </div>
+                    <!-- <div class="row pb-4">
+                      Size :{{S}
+                    </div> -->
+                    <div class="row pb-3"  >
+                      <div class="col-md-3" style="margin-left: -15px;" [(ngModel)]="price">
+                        <b>$ {{prod.price}}</b>
+                      </div>
+                      <div class="col-md-3" style="color: rgb(133, 133, 133);" [(ngModel)]="oldprice">
+                        <s>$ {{prod.oldp}}</s>
+                      </div>
+                      <div class="col-md-6" style="color: rgb(0, 199, 0);">
+                        {{((prod.oldp-prod.price)/prod.oldp)*100}}% off
+                      </div>
+                    </div>
+                    <div class="row pb-2 pt-1" >
+                      <!-- <b>REMOVE</b> --><input type="button" value="REMOVE" (click)="removecart(prod._id)" style="font-weight: bold;background-color: white;color: rgb(228, 112, 110); box-shadow: 2px 2px 7px   #b6b6b6; border: none;" >
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    Delivery by Fri July 30 | <span style="color:  rgb(0, 199, 0);"> Free </span> <s>$4.00</s>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row ordernow p-4">
+          <div style="text-align:right; width:100%; padding:0;">
+            <input type="button" value="PLACE ORDER" class="loginbutton" style="font-weight: bold;" (click)="orderfunc()">
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3 pricebox" style="height: 100%;"  >
+        
+        <div class="row  " style="color: rgb(133, 133, 133); font-size: 20px;"> 
+          <b>PRICE DETAILS</b>
+        </div>
+        <hr style="border-top: 1px solid rgb(180, 180, 180);">
+        <div class="row py-2">
+          <div class="col-md-8 ">
+            Price ({{items}} items)
+          </div>
+          <div class="col-md-4" style="text-align: right;">
+            $ {{oldtotalworth}}
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-md-8">
+            Discount
+          </div>
+          <div class="col-md-4" style="text-align: right; color: rgb(0, 199, 0);">
+            - $ {{oldtotalworth-totalworth}}
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-md-8">
+            Wheel Offer
+          </div>
+          <div class="col-md-4" style="text-align: right; color: rgb(0, 199, 0);">
+           - $ {{offer}}
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-md-8">
+            Delivery Charges
+          </div>
+          <div class="col-md-4" style="text-align: right; color: rgb(0, 199, 0);">
+            FREE
+          </div>
+        </div>
+        <hr style="border-top: 1px dashed rgb(180, 180, 180);">
+        <div class="row py-2 ">
+          <div class="col-md-8">
+            TOTAL AMOUNT
+          </div>
+          <div class="col-md-4" style="text-align: right;">
+            <b>$ {{totalworth-offer}}</b>
+          </div>
+        </div>
+        <hr class="pb-3" style="border-top: 1px dashed rgb(180, 180, 180);">
+        <!-- <div class="row py-2 pb-3">
+          <div class="col-md-12" style="color: rgb(0, 199, 0);">
+            You will save $ {{discountworth + offer}} on this order
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>

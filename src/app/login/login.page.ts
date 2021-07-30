@@ -15,6 +15,7 @@ export class LoginPage implements OnInit {
   status:string ;
   icon = "far fa-eye-slash" ;
   atttype = "password" ;
+  token;
   ngOnInit() {
   }
 
@@ -34,15 +35,16 @@ export class LoginPage implements OnInit {
 
   login(){
     
-    this.http.post('http://127.0.0.1:8000/login/', {email: this.email , password : this.password}).subscribe((res : any) => {
+    this.http.post('http://127.0.0.1:8000/api/login/', {email: this.email , password : this.password}).subscribe((res : any) => {
       this.status = res.status ;
-    
+      this.token = res.token ;
     if (this.status == "true") 
     {
       alert(res.message)
       localStorage.setItem('status', res.status)
       localStorage.setItem('name', res.name )
       localStorage.setItem('email', this.email )
+      localStorage.setItem('token', this.token)
       this.route.navigateByUrl("home")
       
       // window.location.href= "http://localhost:8100/home"; 

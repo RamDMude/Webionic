@@ -1,8 +1,10 @@
 .maintext {
     font-weight: bolder;
-    font-family: 'impact';
+    font-family: "Times New Roman", Times, serif;
     font-size: 40px;
     text-shadow: black;
+    text-shadow: 1px 1px 0 #000;
+    color: rgb(228, 112, 110);
     
 }
 
@@ -25,5 +27,5 @@
     color: black;
 }
 .icondrop:hover{
-    color: blue;
+    color: rgb(228, 112, 110);
 }

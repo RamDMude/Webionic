@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'watches',
     loadChildren: () => import('./watches/watches.module').then( m => m.WatchesPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path: 'offerpage',
+    loadChildren: () => import('./offerpage/offerpage.module').then( m => m.OfferpagePageModule)
+  },
 ];
 
 @NgModule({

@@ -7,27 +7,52 @@
             <div class="row px-5 " >
                 <p style="text-align: center;font-weight: bolder;font-size: 20px;">LOGIN WITH SHOPPER'S STOP</p>
             </div>
+            
             <div class="row p-2 " style="text-align: center;">
-                <input type="text" name="First name" Placeholder="First Name" style="width:380px;height: 40px;" [(ngModel)]="firstname">
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                        First Name </ion-label>
+                <ion-input type="text" name="First name" Placeholder="First Name" style="width:380px;height: 40px;;" [(ngModel)]="firstname"></ion-input>
+            </ion-item>
+            </div>
+
+            
+            <div class="row p-2 " style="text-align: center;">
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                        Last Name </ion-label>
+                <ion-input type="text" name="Last name" Placeholder="Last name" style="width:380px;height: 40px;" [(ngModel)]="lastname"></ion-input>
+            </ion-item>
             </div>
             <div class="row p-2 " style="text-align: center;">
-                <input type="text" name="Last name" Placeholder="Last name" style="width:380px;height: 40px;" [(ngModel)]="lastname">
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                       Email ID </ion-label>
+                <ion-input type="text" name="Email" Placeholder="Email" style="width:380px;height: 40px;" [(ngModel)]="email"></ion-input>
+            </ion-item>
             </div>
             <div class="row p-2 " style="text-align: center;">
-                <input type="text" name="Email" Placeholder="Email" style="width:380px;height: 40px;" [(ngModel)]="email">
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                        Password </ion-label>
+                <ion-input type="{{atttype1}}" id="password" name="password" Placeholder="Password" style="width:293px; height: 40px;" [(ngModel)]="password"></ion-input>  
+                
+            </ion-item>
+            <ion-icon class="{{icon1}} " id="togglePassword" style="font-size: 30px; padding-right: 20px;padding-top: 6%;" (click)="toggle1()" ></ion-icon>
             </div>
             <div class="row p-2 " style="text-align: center;">
-                <input type="{{atttype1}}" id="password" name="password" Placeholder="Password" style="width:377px; height: 40px;" [(ngModel)]="password">  
-                <i class="{{icon1}} pt-1" id="togglePassword" style="font-size: 30px; margin-left: -40px;" (click)="toggle1()" ></i>
+                <ion-item>
+                    <ion-label position="floating" class="text-secondary">
+                        Number </ion-label>
+                <ion-input type="number" name="Mobile Number" Placeholder="Mobile Number" style="width:380px;height: 40px;" [(ngModel)]="number"></ion-input>
+            </ion-item>
             </div>
-            <div class="row p-2 " style="text-align: center;">
-                <input type="number" name="Mobile Number" Placeholder="Mobile Number" style="width:380px;height: 40px;" [(ngModel)]="number">
-            </div>
+              
             <div class="row p-2"style="text-align: center;">
                 <button type="button" class="loginbutton" (click)="register()">CREATE AN ACCOUNT</button>
             </div>
             <div class="row px-3 pt-2 mt-2">
-                Have Account at Shopper's Stop? <a routerLink='/login'style="text-align: center;"> Login</a>
+                Have Account at Shopper's Stop? <a routerLink="/login" style="text-align: center;"> Login</a>
             </div>    
         </div>
         <div class="col-md-4"></div>

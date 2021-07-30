@@ -48,10 +48,17 @@ export class NavbarComponent implements OnInit {
       this.logged = "LOGIN" ;
     }
     else {
-      window.location.href= "http://localhost:8100/login"; 
+      // window.location.href= "http://localhost:8100/login"; 
+      this.router.navigateByUrl("login")
     }
-
-    
   }
   
+  cartclick(){
+    if (this.status1 == "true"){
+      this.router.navigateByUrl("cart") ;
+    }
+    else{
+      alert("Login to view the items in your Cart")
+    }
+  }
 }

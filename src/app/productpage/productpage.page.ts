@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router'; 
 
 @Component({
   selector: 'app-productpage',
@@ -10,7 +11,9 @@ import { HttpClient } from '@angular/common/http';
 export class ProductpagePage implements OnInit {
 
   productname;
+  productid;
   price ;
+  oldp ;
   picture ;
   stock ;
   color ;
@@ -18,17 +21,22 @@ export class ProductpagePage implements OnInit {
   fit;
   material ;
   suitable ;
+  email ;
+  status ;
 
-  constructor(private activatedRoute: ActivatedRoute , private http: HttpClient) { }
+  constructor(private activatedRoute: ActivatedRoute , private http: HttpClient , private route:Router) { }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
-      this.productname = params.productname;
+      this.productid = params.productid;
+      
     })
 
-    this.http.post('http://127.0.0.1:8000/mensproduct/' ,{productname :this.productname }).subscribe((res : any) => {
+    this.http.post('http://127.0.0.1:8000/api/mensproduct/' ,{productid :this.productid }).subscribe((res : any) => {
+      this.productname = res.name ;
       this.picture = res.photo ;
       this.price = res.price ;
+      this.oldp = res.oldp ;
       this.stock = res.stock ;
       this.color = res.color ;
       this.sleeve = res.sleeve ;
@@ -36,12 +44,14 @@ export class ProductpagePage implements OnInit {
       this.material = res.material ;
       this.suitable = res.suitable ;
       
-      
+     
     })
 
-    this.http.post('http://127.0.0.1:8000/womensproduct/' ,{productname :this.productname }).subscribe((res : any) => {
+    this.http.post('http://127.0.0.1:8000/api/womensproduct/' ,{productid :this.productid }).subscribe((res : any) => {
+      this.productname = res.name ;
       this.picture = res.photo ;
       this.price = res.price ;
+      this.oldp = res.oldp ;
       this.stock = res.stock ;
       this.color = res.color ;
       this.sleeve = res.sleeve ;
@@ -51,9 +61,11 @@ export class ProductpagePage implements OnInit {
       
     })
 
-    this.http.post('http://127.0.0.1:8000/watchesproduct/' ,{productname :this.productname }).subscribe((res : any) => {
+    this.http.post('http://127.0.0.1:8000/api/watchesproduct/' ,{productid :this.productid }).subscribe((res : any) => {
+      this.productname = res.name ;
       this.picture = res.photo ;
       this.price = res.price ;
+      this.oldp = res.oldp ;
       this.stock = res.stock ;
       this.color = res.color ;
       this.sleeve = res.sleeve ;
@@ -63,6 +75,13 @@ export class ProductpagePage implements OnInit {
       
     })
     
+  }
+
+  addcart(){
+    this.email = localStorage.getItem('email')
+    this.http.post('http://127.0.0.1:8000/api/addtocart/' ,{productid :this.productid , email:this.email }).subscribe((res : any) => {
+      this.route.navigateByUrl("cart") 
+    })
   }
 
 

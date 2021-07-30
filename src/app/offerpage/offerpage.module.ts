@@ -4,21 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomepagePageRoutingModule } from './homepage-routing.module';
+import { OfferpagePageRoutingModule } from './offerpage-routing.module';
 
-import { HomepagePage } from './homepage.page';
+import { OfferpagePage } from './offerpage.page';
 import { NavbarComponent } from '../navbar/navbar.component' ;
 import { FooterComponent } from '../footer/footer.component' ;
+import { NgxWheelModule } from 'ngx-wheel';
 
-import {CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomepagePageRoutingModule
+    OfferpagePageRoutingModule, NgxWheelModule
   ],
-  declarations: [HomepagePage, NavbarComponent ,FooterComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [OfferpagePage ,NavbarComponent,FooterComponent]
 })
-export class HomepagePageModule {}
+export class OfferpagePageModule {}

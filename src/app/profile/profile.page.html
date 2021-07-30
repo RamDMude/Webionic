@@ -9,16 +9,19 @@
                   <p style="text-align: center;font-weight: bolder;font-size: 20px;">Profile Details</p>
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="text" name="First name" Placeholder="First Name" style="width: 380px;height: 40px;">
+                <input type="email" name="email" attr.Placeholder={{email}} style="width:380px;height: 40px;" disabled>
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="email" id="email" name="email" Placeholder="Email ID" style="width:380px;height: 40px;">
+                <input type="text" name="First name" attr.Placeholder={{deffirstname}} style="width: 380px;height: 40px;" [(ngModel)]="firstname">
               </div>
               <div class="row p-2 " style="text-align: center;">
-                  <input type="number" name="Mobile Number" Placeholder="Mobile Number" style="width:380px;height: 40px;">
+                <input type="text" name="Last name" attr.Placeholder={{deflastname}} style="width: 380px;height: 40px;" [(ngModel)]="lastname">
+              </div>
+              <div class="row p-2 " style="text-align: center;">
+                <input type="number" name="Mobile Number" attr.Placeholder={{defnumber}} style="width:380px;height: 40px;" [(ngModel)]="number">
               </div>
               <div class="row p-2"style="text-align: center;">
-                  <button type="button" class="loginbutton"><b>Update Details</b></button>
+                  <button type="button" class="loginbutton" (click)="updatedetails()"><b>Update Details</b></button>
               </div>
               <div class="myclass5 " style="text-align: center;">
                   <a routerLink="#" >Change Password</a>
